@@ -1,0 +1,22 @@
+{
+    "name": "@csv/db",
+    "version": "1.0.0",
+    "private": true,
+    "main": "dist/index.js",
+    "types": "dist/index.d.ts",
+    "scripts": {
+        "build": "tsc",
+        "type-check": "tsc --noEmit",
+        "migrate": "node --import tsx ./src/cli.ts migrate",
+        "migrate:rollback": "node --import tsx ./src/cli.ts rollback"
+    },
+    "dependencies": {
+        "pg": "^8.11.3"
+    },
+    "devDependencies": {
+        "@types/node": "^20.10.5",
+        "@types/pg": "^8.11.2",
+        "typescript": "^5.3.3",
+        "tsx": "^4.7.0"
+    }
+}
